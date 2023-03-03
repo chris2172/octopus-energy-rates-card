@@ -67,7 +67,8 @@ Here's a breakdown of all the available configuration items:
 * Otherwise, the row is coloured is green. 
 
 #### Screenshot
-![screenshot_1](assets/screenshot_1.png)
+![2023-03-03 13 06 07](https://user-images.githubusercontent.com/11930805/222727581-d94864c3-87d0-4403-bae0-9b534a11fccc.png)
+
 
 
 #### Thanks/inspiration
