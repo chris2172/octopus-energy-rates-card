@@ -57,7 +57,7 @@ Here's a breakdown of all the available configuration items:
 | highlimit   | Y        | 30 (pence)    | If the price is above `highlimit`, the row is marked red.                                                                                            |
 | roundUnits  | Y        | 2             | Controls how many decimal places to round the rates to                                                                                               |
 | showunits   | Y        | true          | Controls whether the prices are printed with the unit (p/kWh)                                                                                        |
-
+| export   | Y        | false          | Flips the colour when export is ture making higher values as Green                                                                                      |
 
 #### A note on colouring
 
