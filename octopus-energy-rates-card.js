@@ -81,6 +81,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
         }
 
         const entityId = this.config.entity;
+        const exportbool = this.config.export;
         const state = hass.states[entityId];
         const attributes = this.reverseObject(state.attributes);
         const stateStr = state ? state.state : 'unavailable';
@@ -129,10 +130,21 @@ class OctopusEnergyRatesCard extends HTMLElement {
             // If the showday config option is set, include the shortened weekday name in the user's Locale
             var date_locale = (showday ? date.toLocaleDateString(lang, { weekday: 'short' }) + ' ' : '');
 
-            var colour = "green";
-            if(key.rate > highlimit) colour = "red";
-            else if(key.rate > mediumlimit) colour = "orange";
-            else if(key.rate <= 0 ) colour = "blue";
+            // (!config.showpast ? false : config.showpast);
+            //const exportbool = this.config.export;
+            
+            if(exportbool == true) {
+                var colour = "red";
+                if(key.rate > highlimit) colour = "green";
+                else if(key.rate > mediumlimit) colour = "orange";
+                else if(key.rate >= 40 ) colour = "blue"; 
+            } else {
+                var colour = "green";
+                if(key.rate > highlimit) colour = "red";
+                else if(key.rate > mediumlimit) colour = "orange";
+                else if(key.rate <= 0 ) colour = "blue"; 
+            }
+
 
             if(showpast || (date - Date.parse(new Date())>0)) {
                 table = table.concat("<tr class='rate_row'><td class='time time_"+colour+"'>" + date_locale + time_locale + 
@@ -196,6 +208,9 @@ class OctopusEnergyRatesCard extends HTMLElement {
         this.showday = (!config.showday ? false : config.showday);
 
         // Controls the title of the card
+        this.exportbool = (!config.export ? false : config.export);
+        
+        // Controls the colour order if export
         this.title = (!config.title ? 'Agile Rates' : config.title);
 
         // Colour controls:
