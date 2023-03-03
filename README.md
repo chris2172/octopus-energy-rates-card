@@ -13,7 +13,7 @@ The easiest way to install it is via [HACS (Home Assistant Community Store)](htt
 
 In the Home Assistant UI:
 * use HACS -> Frontend -> Top Right Menu -> Custom repositories
-* Enter a repo of `lozzd/octopus-energy-rates-card` and category of "Lovelace", and click the Add button
+* Enter a repo of `chris2172/octopus-energy-rates-card` and category of "Lovelace", and click the Add button
 * Click "Explore & Download Repositories" and start searching for "octo" and you should see the entry. 
 * Click "Download" in the bottom right
 
