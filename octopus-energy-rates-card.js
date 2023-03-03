@@ -207,7 +207,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
         // Show the day of the week with the time
         this.showday = (!config.showday ? false : config.showday);
 
-        // Controls the title of the card
+        // Allows the colours to be inverted when exporting
         this.exportbool = (!config.export ? false : config.export);
         
         // Controls the colour order if export
