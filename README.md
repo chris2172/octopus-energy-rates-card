@@ -71,4 +71,6 @@ Here's a breakdown of all the available configuration items:
 
 
 #### Thanks/inspiration
+Personalised this card from https://github.com/lozzd/octopus-energy-rates-card
+
 This card was based on and reworked from the code [markgdev/home-assistant_OctopusAgile](https://github.com/markgdev/home-assistant_OctopusAgile/tree/master/custom_cards) which is no longer maintained. 
